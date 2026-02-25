@@ -170,3 +170,108 @@
 .image {
   object-fit: cover; /* 画像を枠いっぱいに */
 }
+
+.main {
+  min-height: 100vh;
+  padding: 48px 40px;
+  color: #e6e8ef;
+}
+
+.backButton {
+  display: inline-block;
+  margin-bottom: 16px;
+  text-decoration: none;
+  font-weight: 700;
+}
+
+.title {
+  text-align: center;
+  margin: 0 0 18px;
+  font-size: 32px;
+}
+
+.searchWrap {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  margin: 18px 0 10px;
+}
+
+.searchInput {
+  width: min(520px, 92vw);
+  padding: 12px 14px;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: rgba(0, 0, 0, 0.25);
+  color: inherit;
+  outline: none;
+}
+
+.clearButton {
+  padding: 12px 14px;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: rgba(255, 255, 255, 0.08);
+  color: inherit;
+  cursor: pointer;
+}
+
+.count {
+  text-align: center;
+  opacity: 0.8;
+  margin: 0 0 20px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 16px;
+}
+
+.card {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  border-radius: 16px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: rgba(0, 0, 0, 0.22);
+}
+
+.imageWrap {
+  position: relative;
+  height: 150px;
+}
+
+.image {
+  object-fit: cover;
+}
+
+.imagePlaceholder {
+  height: 150px;
+  display: grid;
+  place-items: center;
+  opacity: 0.7;
+  background: rgba(255, 255, 255, 0.06);
+}
+
+.cardBody {
+  padding: 12px 14px 14px;
+}
+
+.cardTitle {
+  margin: 0;
+  font-size: 18px;
+}
+
+.cardSub {
+  margin: 6px 0 0;
+  opacity: 0.8;
+  font-size: 13px;
+}
+
+.meta {
+  margin: 10px 0 0;
+  opacity: 0.85;
+  font-size: 13px;
+}

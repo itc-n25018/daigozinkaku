@@ -57,6 +57,12 @@
   color: rgba(230, 232, 239, 0.6);
 }
 
+/* 右側を縦並びにする */
+.right {
+  display: grid;
+  gap: 18px;
+}
+
 .skills {
   border-radius: 16px;
   background: rgba(10, 14, 26, 0.62);
@@ -96,6 +102,54 @@
   color: rgba(230, 232, 239, 0.75);
   line-height: 1.7;
   white-space: pre-line;
+}
+
+/* ===== 存在感（追加） ===== */
+
+.presence {
+  border-radius: 16px;
+  background: rgba(10, 14, 26, 0.62);
+  border: 1px solid rgba(215, 181, 109, 0.22);
+  padding: 18px 18px 6px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.45);
+}
+
+.presenceList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: 12px;
+}
+
+.presenceItem {
+  border-top: 1px dashed rgba(215, 181, 109, 0.22);
+  padding-top: 12px;
+}
+
+.presenceHeader {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 6px;
+}
+
+.presenceTag {
+  display: inline-block;
+  padding: 4px 10px;
+  border-radius: 999px;
+  font-weight: 900;
+  letter-spacing: 0.08em;
+  font-size: 12px;
+  color: rgba(215, 181, 109, 0.95);
+  border: 1px solid rgba(215, 181, 109, 0.35);
+  background: rgba(215, 181, 109, 0.08);
+}
+
+.presenceName {
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  color: rgba(230, 232, 239, 0.92);
 }
 
 @media (max-width: 980px) {

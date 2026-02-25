@@ -32,24 +32,55 @@ export default function HunterDetailPage({
       <div className={styles.layout}>
         <div className={styles.imageWrap}>
           {h.image ? (
-            <Image src={h.image} alt={h.name} fill className={styles.image} />
+            <Image
+              src={h.image}
+              alt={h.name}
+              fill
+              sizes="520px"
+              className={styles.image}
+              priority={false}
+            />
           ) : (
             <div className={styles.noImage}>NO IMAGE</div>
           )}
         </div>
 
-        <section className={styles.skills}>
-          <h2 className={styles.sectionTitle}>特質</h2>
+        <div className={styles.right}>
+          {/* 外在特質 */}
+          <section className={styles.skills}>
+            <h2 className={styles.sectionTitle}>外在特質</h2>
 
-          <ul className={styles.skillList}>
-            {h.skills.map((skill, i) => (
-              <li key={i} className={styles.skillItem}>
-                <div className={styles.skillName}>{skill.name}</div>
-                <p className={styles.skillDesc}>{skill.description}</p>
-              </li>
-            ))}
-          </ul>
-        </section>
+            <ul className={styles.skillList}>
+              {h.skills.map((skill, i) => (
+                <li key={i} className={styles.skillItem}>
+                  <div className={styles.skillName}>{skill.name}</div>
+                  <p className={styles.skillDesc}>{skill.description}</p>
+                </li>
+              ))}
+            </ul>
+          </section>
+
+          {/* 存在感（ある時だけ表示） */}
+          {h.presence && h.presence.length > 0 && (
+            <section className={styles.presence}>
+              <h2 className={styles.sectionTitle}>存在感</h2>
+
+              <ul className={styles.presenceList}>
+                {h.presence.map((p, i) => (
+                  <li key={i} className={styles.presenceItem}>
+                    <div className={styles.presenceHeader}>
+                      <span className={styles.presenceTag}>
+                        存在感 {p.level}
+                      </span>
+                      <span className={styles.presenceName}>{p.name}</span>
+                    </div>
+                    <p className={styles.skillDesc}>{p.description}</p>
+                  </li>
+                ))}
+              </ul>
+            </section>
+          )}
+        </div>
       </div>
     </main>
   );
