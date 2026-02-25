@@ -4,7 +4,7 @@ import { useMemo, useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import styles from "./hunter.module.css";
-import { hunters } from "./hunters"; // ← あなたの hunters.ts のパスに合わせてね
+import { hunters } from "./hunters";
 
 export default function HunterPage() {
   const [query, setQuery] = useState("");
@@ -13,11 +13,8 @@ export default function HunterPage() {
     const q = query.trim().toLowerCase();
     if (!q) return hunters;
 
-    return hunters.filter((h) => {
-      const name = (h.name ?? "").toLowerCase();
-      const id = (h.id ?? "").toLowerCase();
-      return name.includes(q) || id.includes(q);
-    });
+    // ✅ 名前のみで検索
+    return hunters.filter((h) => (h.name ?? "").toLowerCase().includes(q));
   }, [query]);
 
   return (
@@ -28,13 +25,13 @@ export default function HunterPage() {
 
       <h1 className={styles.title}>ハンター性能紹介</h1>
 
-      {/* 🔎 検索 */}
+      {/* 🔎 名前検索のみ */}
       <div className={styles.searchWrap}>
         <input
           className={styles.searchInput}
           value={query}
           onChange={(e) => setQuery(e.target.value)}
-          placeholder="名前 で検索（例：リッパー）"
+          placeholder="ハンター名で検索（例：リッパー）"
         />
         {query && (
           <button className={styles.clearButton} onClick={() => setQuery("")}>
@@ -50,7 +47,6 @@ export default function HunterPage() {
       <div className={styles.grid}>
         {filtered.map((h) => (
           <Link key={h.id} href={`/hunter/${h.id}`} className={styles.card}>
-            {/* 画像 */}
             {h.image ? (
               <div className={styles.imageWrap}>
                 <Image
@@ -67,9 +63,8 @@ export default function HunterPage() {
 
             <div className={styles.cardBody}>
               <h2 className={styles.cardTitle}>{h.name}</h2>
-              <p className={styles.cardSub}>id: {h.id}</p>
 
-              {/* ちょい情報 */}
+              {/* id表示 完全削除 */}
               <p className={styles.meta}>
                 外在特質: {h.skills?.length ?? 0} / 存在感:{" "}
                 {h.presence?.length ?? 0}
