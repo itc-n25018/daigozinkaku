@@ -1,0 +1,115 @@
+.main {
+  min-height: 100vh;
+  padding: 40px 16px;
+  background: linear-gradient(180deg, #070a12 0%, #0b1020 55%, #060812 100%);
+  color: #e6e8ef;
+}
+
+.backButton {
+  display: inline-block;
+  margin-bottom: 16px;
+  color: #4fc3f7;
+  text-decoration: none;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+}
+.backButton:hover {
+  opacity: 0.8;
+}
+
+.title {
+  text-align: center;
+  margin: 0 0 18px;
+  font-size: 30px;
+  font-weight: 900;
+  letter-spacing: 0.12em;
+  color: #d7b56d;
+  text-shadow: 0 2px 0 rgba(0, 0, 0, 0.6);
+}
+
+.searchRow {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  max-width: 520px;
+  margin: 0 auto 10px;
+}
+
+.searchInput {
+  flex: 1;
+  padding: 12px 14px;
+  border-radius: 10px;
+  border: 1px solid rgba(215, 181, 109, 0.25);
+  background: rgba(10, 14, 26, 0.62);
+  color: #fff;
+  outline: none;
+}
+.searchInput::placeholder {
+  color: rgba(230, 232, 239, 0.55);
+}
+.searchInput:focus {
+  border-color: #4fc3f7;
+}
+
+.count {
+  text-align: center;
+  color: rgba(230, 232, 239, 0.6);
+  font-size: 12px;
+  margin-bottom: 18px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 16px;
+}
+
+.cardLink {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+}
+
+.card {
+  border-radius: 14px;
+  overflow: hidden;
+  background: rgba(10, 14, 26, 0.62);
+  border: 1px solid rgba(215, 181, 109, 0.22);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.45);
+  transition:
+    transform 0.18s ease,
+    border-color 0.18s ease;
+}
+.card:hover {
+  transform: translateY(-6px);
+  border-color: rgba(215, 181, 109, 0.42);
+}
+
+.imageArea {
+  position: relative;
+  width: 100%;
+  height: 220px;
+  background: rgba(0, 0, 0, 0.25);
+  border-bottom: 1px solid rgba(215, 181, 109, 0.14);
+}
+
+.image {
+  object-fit: cover;
+}
+
+.noImage {
+  display: grid;
+  place-items: center;
+  height: 100%;
+  color: rgba(230, 232, 239, 0.55);
+  font-size: 13px;
+  letter-spacing: 0.12em;
+}
+
+.name {
+  padding: 14px 10px;
+  font-size: 16px;
+  text-align: center;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+}
