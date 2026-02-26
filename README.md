@@ -51,6 +51,8 @@ https://daigozinkaku.vercel.app/
 ├─ lib/
 │  └─ microcms.ts
 ├─ public/
+│     ├─ hunter/...
+│     ├─ survivor/...
 ├─ .env.local
 ├─ .eslintrc.json
 ├─ .gitignore
