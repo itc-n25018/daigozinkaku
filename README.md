@@ -35,21 +35,31 @@ https://daigozinkaku.vercel.app/
 ## ディレクトリ構成
 
 ```
-app/
-├─ page.tsx            # トップページ
-├─ survivor/           # サバイバー機能
-│  ├─ page.tsx         # 一覧
-│  ├─ survivors.ts     # データ管理
-│  └─ [id]/page.tsx    # 詳細ページ
-│
-├─ hunter/             # ハンター機能
-│  ├─ page.tsx         # 一覧
-│  ├─ hunters.ts       # データ管理
-│  └─ [id]/page.tsx    # 詳細ページ
-│
-public/
-├─ survivors/          # サバイバー画像
-└─ hunters/            # ハンター画像
+.
+├─ app/
+│  ├─ api/
+│  ├─ hunter/
+│  │  ├─ [id]/
+│  │  ├─ hunter.module.css
+│  │  ├─ hunters.ts
+│  │  └─ page.tsx
+│  ├─ survivor/
+│  ├─ favicon.ico
+│  ├─ globals.css
+│  ├─ layout.tsx
+│  └─ page.tsx
+├─ lib/
+│  └─ microcms.ts
+├─ public/
+├─ .env.local
+├─ .eslintrc.json
+├─ .gitignore
+├─ next-env.d.ts
+├─ package-lock.json
+├─ package.json
+├─ README.md
+├─ README2.md
+└─ tsconfig.json
 ```
 
 ## ローカル起動方法
