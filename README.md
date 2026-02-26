@@ -26,8 +26,7 @@ https://daigozinkaku.vercel.app/
 - Next.js (App Router)
 - TypeScript
 - CSS Modules
-- Vercel（デプロイ）
-- （microCMS ※使用している場合）
+- Vercel（デプロイ））
 
 ---
 
